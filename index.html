@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Leighton ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#050505;color:#f5f5f5;font-family:Georgia,serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 20%,rgba(150,0,0,.22),transparent 38%);pointer-events:none}
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 16px}
+.card{width:min(720px,100%);position:relative;text-align:center}
+.intro{min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.heart{font-size:54px;color:#b30000;animation:pulse 1.7s infinite}
+h1{font-size:clamp(34px,9vw,64px);margin:12px 0 8px;color:#fff}
+.sub{color:#aaa;font-family:Arial,sans-serif;letter-spacing:1px}
+button{border:1px solid #b30000;background:#8e0000;color:white;border-radius:999px;padding:14px 28px;font-size:16px;margin-top:28px;cursor:pointer;box-shadow:0 0 25px rgba(180,0,0,.25)}
+button:hover{background:#b00000}
+.letter{display:none;text-align:left;background:rgba(15,15,15,.94);border:1px solid #4a0000;border-radius:18px;padding:28px 24px;box-shadow:0 20px 70px rgba(0,0,0,.7)}
+.letter.show{display:block;animation:rise .9s ease}
+.letter h2{text-align:center;color:#d10000;font-size:30px;margin:0 0 24px}
+p{font-family:Arial,sans-serif;line-height:1.85;font-size:16px;margin:0 0 19px;color:#eee}
+.end{text-align:center;font-family:Georgia,serif;font-size:24px!important;color:#fff!important;margin-top:28px!important}
+.music{text-align:center;color:#888;font:13px Arial,sans-serif;margin-top:18px}
+@keyframes pulse{50%{transform:scale(1.12)}}
+@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap"><main class="card">
+<section class="intro" id="intro">
+<div class="heart">♥</div>
+<h1>For Leighton</h1>
+<div class="sub">one year, countless memories, and still you.</div>
+<button id="open">Open my letter ❤️</button>
+</section>
+
+<section class="letter" id="letter">
+<h2>Happy Anniversary, Mahal.</h2>
+
+<p>Hi, Leighton! This message is for u.</p>
+
+<p>I can't believe it's been a year since we've been together, all the things we went through. Hindi ako makapaniwalang from a single random mis-click invite sa ML, mahahanap ko yung babaeng magliligtas at magbibigay ng purpose sa buhay ko.</p>
+
+<p>Hindi ko expect na ganito tayo tatagal since never pa 'ko nagka-relationship na umabot ng 1 year, mahal, pero I'm really glad you're the one I experienced it with.</p>
+
+<p>At first, I really didn't want anything to happen. I never meant to flirt with you or anything, pero over time gumagaan yung loob ko sa'yo. Nagiging comfortable ako maging ako pagdating sa'yo.</p>
+
+<p>And then that time na I went to that camp thing, when you said you'd pray for me, I never felt more safe in my entire life. I knew I was falling in love with you na.</p>
+
+<p>It's so funny how life works, no, mahal? Sobrang coincidental ng pag-meet natin. Everything we did, it was for a reason, and siguro nga eto yung reason na 'yon.</p>
+
+<p>At first I didn't believe in the red string theory cuz I thought it was bullshit at first, pero because of you, I think naniniwala na ako hahaha.</p>
+
+<p>Mahal na mahal kita, Lei. I'm really sorry if minsan may pagkukulang ako sa'yo. I'm really grateful for you staying even in my worst days.</p>
+
+<p>I know na hindi pa ito ang huli. Mas marami pa tayong problemang dadaanan, bagay na pag-aawayan, at pagsubok na lalagpasan.</p>
+
+<p>Mahal na mahal kita sobraaa. Lahat sa'yo mahal ko. I love your smile, your pretty face, I love how kind you are to me and to other people (I hope na you be kinder to yourself rin ^-^). I love how you're super passionate in the things you do. I love how you love me. I love you for being who you are.</p>
+
+<p class="end">Mahal na mahal kita. ❤️<br><br>(Idc kahit paulit-ulit na, I'd say it again and again.)<br><br>Lei, happy anniversary!<br>I love you again and again and again.</p>
+
+<div class="music">♪ Mrs Magic (Strings Version) · tap the music control below if your browser pauses audio</div>
+</section>
+
+<audio id="music" loop preload="auto">
+<!-- Put your legally obtained audio file beside this HTML and name it music.mp3 -->
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+</main></div>
+<script>
+const btn=document.getElementById('open'), intro=document.getElementById('intro'), letter=document.getElementById('letter'), music=document.getElementById('music');
+btn.addEventListener('click',async()=>{
+  intro.style.display='none'; letter.classList.add('show');
+  try{await music.play()}catch(e){
+    const b=document.createElement('button'); b.textContent='Play our song ♪';
+    b.onclick=()=>music.play(); document.querySelector('.music').appendChild(b);
+  }
+});
+</script>
+</body>
+</html>
